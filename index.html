@@ -1,0 +1,19 @@
+ function setCustomTimer()
+  {
+    setInterval(showtimer, 1000);
+    return false;
+  }
+
+  function showtimer() {
+    if(seconds == 00)
+    {
+      seconds = 60;
+      minutes--;
+    }
+    seconds--;
+
+    document.getElementById('countdown').innerHTML = minutes + ":" +    seconds;
+  }
+</script>   </head>   <body> 
+<a href="javascript:void(0);" onClick="setCustomTimer(60,59)" title="google.com" >google.com</a>
+<div id="countdown" class="timer"></div>   </body> </html>
